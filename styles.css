@@ -34,17 +34,12 @@ a{
     }
 }
 
-
-section {
-    padding-top: 30px;
-    margin-top: -100px;
-}
-
 header{
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     background-color: white;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -75,21 +70,7 @@ header{
         }
         .logo-text{
             flex: 1;
-            font-size: 1rem;
-            
-        }
-    }
 
-    @media (max-width:768px){
-        .logo-text{
-            font-size: 0.9rem;
-            text-align: left;
-        }
-
-        .logo {
-            height: 50px;
-            width: 50px;
-            font-size: 20px;
         }
     }
 
@@ -128,10 +109,10 @@ header{
         }
     }
 
-    @media (max-width: 1024px){
-        flex-direction: column;
-        align-items: center;
-    }
+    @media (max-width: 1024px) {
+		flex-direction:column;
+		align-items:center;
+	}
 
     @media (max-width: 768px){
         flex-direction: column;
@@ -147,6 +128,7 @@ header{
                 width: 100%;
                 a {
                     width: 100%;
+                    padding: 10px 0;
                 }
                 &.active {
                     display: flex;
@@ -154,6 +136,21 @@ header{
             }
         }
     }
+
+}
+
+section {
+    padding-top: 20px;
+	max-width:1440px;
+	margin:auto;
+	gap:30px;
+	margin-top:30px;
+	margin-bottom:30px;
+
+	@media (max-width:1440px){
+		padding-left:30px;
+		padding-right:30px;
+	}
 
 }
 
@@ -210,7 +207,7 @@ h1 {
     }
 
     @media (max-width:768px){
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 }
 
@@ -277,7 +274,7 @@ h2 {
     line-height: 1;
     margin-bottom: 10px;
     text-align: center;
-    padding: 30px;
+    padding: 20px;
     small {
         display: block;
         font-weight: 100;
@@ -313,7 +310,7 @@ h2 {
                 padding-top: 56.25%;
                 overflow: hidden;
                 position: relative;
-                border-radius: 20px;
+                border-radius: 30px;
                 img {
                     position: absolute;
                     border-radius: 20px;
@@ -343,7 +340,7 @@ h2 {
                     }
                     img {
                         transform: scale(1.2);
-                        border-radius: 20px;
+                        border-radius: 30px;
                     }
                 }
             }
@@ -375,7 +372,7 @@ h2 {
                 padding-top: 56.25%;
                 overflow: hidden;
                 position: relative;
-                border-radius: 20px;
+                border-radius: 30px;
                 img {
                     position: absolute;
                     border-radius: 20px;
@@ -405,8 +402,6 @@ h2 {
                     }
                     img {
                         transform: scale(1.2);
-
-                        border-radius: 20px;
                     }
                 }
             }

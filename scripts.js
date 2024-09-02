@@ -1,8 +1,14 @@
 function toggleMobileMenu(){
     document.getElementById("menu").classList.toggle
     ("active");
+    
+    const links = menu.querySelectorAll("a");
+    links.forEach(link => {
+        link.addEventListener("click", () => {
+            menu.classList.remove("active");
+        });
+    });
 }
-
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -19,12 +25,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             const targetElement = document.querySelector(targetId);
 
             window.scrollTo({
-                top: targetElement.offsetTop - 60, // Adjust 60px according to header height
+                top: targetElement.offsetTop - 80, // Adjust 60px according to header height
                 behavior: 'smooth'
             });
         }
     });
 });
+
 
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault(); // Prevent the default form submission
