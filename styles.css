@@ -56,7 +56,6 @@ header{
 
     .logo-holder{
         display: flex;
-        flex-wrap: wrap;
         padding: 10px;
         align-items: center;
         font-weight: 600;
@@ -77,15 +76,14 @@ header{
         .logo-text{
             flex: 1;
             font-size: 1rem;
-            overflow: hidden;
+            
         }
     }
 
     @media (max-width:768px){
         .logo-text{
-            font-size: 1rem;
-            text-align: center;
-            margin-right: 50px;
+            font-size: 0.9rem;
+            text-align: left;
         }
 
         .logo {
