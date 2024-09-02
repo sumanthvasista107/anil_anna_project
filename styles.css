@@ -75,7 +75,9 @@ header{
         }
         .logo-text{
             flex: 1;
-
+            @media (max-width:768px){
+                font-size: 30px;
+            }
 
         }
     }
@@ -197,7 +199,7 @@ h1 {
     }
 
     @media (max-width:768px){
-        font-size: 30px;
+        font-size: 1.5rem;
     }
 }
 
@@ -271,8 +273,8 @@ h2 {
         font-size: 0.5cm;
         color:var(--base);
     }
-    @media  (max-width:1024px) {
-        font-size: 48px;
+    @media  (max-width:768px) {
+        font-size: 2rem;
     }
 }
 
