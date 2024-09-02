@@ -15,7 +15,7 @@
     <header>
         <a href="#" class="logo-holder">
             <div class="logo">logo</div>
-            <div class="logo-text">Temple Portfolio Website</div>
+            <div class="logo-text">Sri Venkateshwara Swamy Temple</div>
         </a>
         <nav>
             <ul id="menu">
@@ -44,9 +44,6 @@
         </nav>
     </header>
 
-
-    
-    <script src="./scripts.js"></script>
     
     <main>
         <section class="hero container" id = "home">
@@ -66,13 +63,13 @@
                     spritual fullfillment.</span> 
                 </p>
                 <div class="social-links">
-                    <a href="#">
+                    <a href="https:www.facebook.com" target="_blank" rel="noopener noreferrer">
                         <img src="./images/icons8-facebook-96.png"
                         alt="facebook" width="40px"/>
                     </a>
-                    <a href="#">
-                        <img src="./images/icons8-whatsapp-48.png"
-                        alt="whatsapp" width="40px"/>
+                    <a href="https://wa.me/917829541631" target="_blank" rel="noopener noreferrer">
+                        <img src="./images/WhatsAppButtonGreenLarge.png"
+                        alt="whatsapp" width="160px"/>
                     </a>
                 </div>
             </div>
@@ -227,14 +224,17 @@
         <section class="contact-us container" id="contact-us">
             <div class="contact-form">
                 <h2>Contact Us</h2>
-                <form action="#" method="post">
+                <form id="contactForm" action="https://formspree.io/f/mldrveae" method="post">
                     <div class="form-group">
                         <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" 
+                        pattern="[A-Za-z\s]{2,}" 
+                        title="Name should be at least 2 characters long"required>
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" required>
+                        <input type="tel" id="phone" name="phone" 
+                        pattern="\d{10}" title="Phone number should be 10 digits long" required>
                     </div>
                     <div class="form-group">
                         <label for="message">Your Message</label>
@@ -243,16 +243,22 @@
                     <button type="submit" class="button">Send Message</button>
                 </form>
             </div>
-        
+                      
             <div class="contact-info">
                 <h2>Contact Information</h2>
                 <p><strong>Sri Anil</strong></p>
                 <p>Pujari, Sri Venkateshwara Temple</p>
                 <p>Kumbalahalli, Karnataka, India</p>
-                <p>Phone: +91 12345 67890</p>
+                <p>Phone: +91 7829541631</p>
                 <p>Email: priest@sritemple.com</p>
             </div>
+
+            <div id="thankYouModal" style="display:none;">
+                <p>Thank you! Your message has been sent successfully.</p>
+                <button id="closeModal">Close</button>
+            </div> 
         </section>
+        <script src="./scripts.js"></script>
     </main>
 </body>
 </html>
